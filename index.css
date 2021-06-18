@@ -4,6 +4,7 @@
 *, *:before, *:after { 
 	box-sizing: border-box;
 	outline: none;
+	border: none;
 	overflow: hidden;
 	user-select: none;
 	-webkit-user-select: none;
@@ -12,7 +13,7 @@
 	-ms-user-select: none;
 }
 html { 
-	font-family: 'Helvetica Neue' Helvetica Verdana 'sans serif' Arial serif;
+	font-family: 'Helvetica Neue', Helvetica, Verdana, sans-serif, Arial, serif;
 	font-size: 0.9em;
 }
 body { 
@@ -128,15 +129,12 @@ a:hover::before ,a:focus::before {
 	text-align: center;
 	opacity: 0;
 	transform: translate3d(0, 30%, 0);
+	transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 } 
 
 .show_heading {
-    animation: heading_frame 1s ease-in-out forwards;
-} 
-
-@keyframes heading_frame {
-    100% {opacity: 1;
-          transform: translate3d(0, 0, 0);}
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 } 
 
 
@@ -167,13 +165,10 @@ a:hover::before ,a:focus::before {
 	animation: slide-up-h1 0.5s ease-out 0.5s 1 normal backwards;
 }
 @keyframes slide-up-h1 { 
-	0% { 
-	transform: translate3d(-50%, calc(50px - 50%), 0);
-	opacity: 0;
-}
-100% { 
-	transform: translate3d(-50%, -50%, 0);
-	opacity: 1}
+	0% {transform: translate3d(-50%, calc(50px - 50%), 0);
+	    opacity: 0;}
+    100% {transform: translate3d(-50%, -50%, 0);
+	      opacity: 1}
 }
 .intro h1 span { 
 	display: inline-block;
@@ -220,15 +215,16 @@ a:hover::before ,a:focus::before {
 	border: 2px solid #190034;
 	object-fit: cover;
 	box-shadow: 0 0 5px 2px #0F001F;
+	transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 	opacity: 0;
-	transform: translate3d(-20%, 0, 0);
+	transform: translate3d(-30%, 0, 0);
+} 
+.about img:hover {
+    transform: scale3d(1.1,1.1,1.1) !important;
 } 
 .show_icon {
-    animation: image_frame 1s ease-in-out 0s forwards;
-} 
-@keyframes image_frame {
-    100% {opacity: 1;
-          transform: translate3d(0, 0, 0);}
+    opacity: 1 !important;
+    transform: translate3d(0,0,0) !important;
 } 
 .about .details { 
 	max-width: 480px;
@@ -287,6 +283,7 @@ a:hover::before ,a:focus::before {
 	flex-flow: row nowrap;
 	opacity: 0;
 	transform: translate3d(0,30%,0);
+	overflow: visible;
 }
 .show_images {
     animation: show_images_frame 1s ease-in-out forwards;
@@ -305,7 +302,12 @@ a:hover::before ,a:focus::before {
 	background: transparent;
 	object-fit: contain;
 	object-position: center;
-}
+	transition: transform 500ms ease-in-out;
+} 
+
+.images img:hover {
+    transform: scale3d(1.2,1.2,1.2);
+} 
 
 
 /*Certification section*/
@@ -330,21 +332,16 @@ a:hover::before ,a:focus::before {
 	color: #190034;
 	position: relative;
 	transform: scale3d(0, 0, 0);
+	transition: transform 1s ease-in-out, color 1s ease-in-out;
 	z-index: 1;
 } 
 .show_certs {
-    animation: certs_frame 1s ease-in-out forwards;
-} 
-@keyframes certs_frame {
-    100% {transform: scale3d(1, 1, 1);}
+    transform: scale3d(1,1,1) !important;
 } 
 .skills a:hover { 
-	animation: hover_anim 500ms ease-in-out forwards;
+    color: #E077FF !important;
+    transform: rotate(10deg) !important;
 }
-@keyframes hover_anim {
-    100% {color: #E077FF;
-          transform: rotate(10deg);}
-} 
 .skills a:before { 
 	content: '';
 	position: absolute;
@@ -467,7 +464,11 @@ a:hover::before ,a:focus::before {
 .social_media a img { 
 	width: 100%;
 	object-fit: contain;
+	transition: transform 300ms ease-in-out;
 }
+.social_media a img:hover {
+    transform: scale3d(1.3,1.3,1.3);
+} 
 .social_media p { 
 	color: #333;
 	font-size: 0.8rem;
@@ -498,6 +499,5 @@ a:hover::before ,a:focus::before {
     }
     .skills { 
 	    justify-content: center;
-	    
     }
 }
