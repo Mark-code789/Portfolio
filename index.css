@@ -33,6 +33,8 @@ section {
 	padding: 15px;
 }
 p { 
+    height: fit-content;
+    width: 100%;
 	line-height: 2em;
 	font-size: 1rem;
 	font-weight: 400;
@@ -116,7 +118,7 @@ a:hover::before ,a:focus::before {
 }
 .details { 
 	height: fit-content;
-	width: fit-content;
+	width: 100%;
 	margin: 0;
 	overflow: visible;
 }
@@ -333,7 +335,7 @@ a:hover::before ,a:focus::before {
 	position: relative;
 	transform: scale3d(0, 0, 0);
 	transition: transform 1s ease-in-out, color 1s ease-in-out;
-	z-index: 1;
+	z-index: 0;
 } 
 .show_certs {
     transform: scale3d(1,1,1) !important;
@@ -343,7 +345,7 @@ a:hover::before ,a:focus::before {
     transform: rotate(10deg) !important;
 }
 .skills a:before { 
-	content: '';
+	content: 'Click to view this certificate';
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -351,9 +353,16 @@ a:hover::before ,a:focus::before {
 	width: 100%;
 	transform: translate3d(-50%, -50%, 0) scale(0);
 	transform-origin: 0 0;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	text-align: center;
+	color: #E077FF;
 	background: linear-gradient(135deg, #190034 94%, #D100FF 6%);
 	transition: transform 500ms ease-in-out;
-	z-index: -1;
+	z-index: 1;
 }
 .skills a:after { 
 	content: '';
@@ -366,7 +375,7 @@ a:hover::before ,a:focus::before {
 	background: #D100FF;
 	transition: opacity 500ms ease-in-out;
 	opacity: 0;
-	z-index: -1;
+	z-index: 1;
 }
 .skills a:hover:after,.skills a:focus:after { 
 	opacity: 1;
@@ -413,8 +422,6 @@ a:hover::before ,a:focus::before {
 .contact p { 
 	color: #ddd;
 	margin: 0;
-	height: fit-content;
-	width: 100%;
 	font-weight: 500;
 	font-size: 1.2rem;
 	text-align: center;
@@ -495,7 +502,6 @@ a:hover::before ,a:focus::before {
     }
     .images { 
 	    height: calc(50vw - 30px);
-	    
     }
     .skills { 
 	    justify-content: center;
