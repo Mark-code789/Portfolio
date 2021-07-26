@@ -66,9 +66,8 @@ window.onload=()=>{
         observer.observe(a);
     for(let img of document.querySelectorAll('.images'))
         observer.observe(img);
-    for(let detail of document.querySelectorAll('.details')) {
-        for(let p of detail.children) 
-            observer.observe(p);
+    for(let p of document.querySelectorAll('.details p')) {
+        observer.observe(p);
     } 
 };
 const TriggerAnimation=(e)=>{}
