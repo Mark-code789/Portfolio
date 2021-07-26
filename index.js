@@ -67,7 +67,6 @@ window.onload=()=>{
     for(let img of document.querySelectorAll('.images'))
         observer.observe(img);
     for(let p of document.querySelectorAll('.details p')) {
-        console.log(p.textContent);
         observer.observe(p);
     } 
 };
