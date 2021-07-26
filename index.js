@@ -62,7 +62,7 @@ window.onload=()=>{
         observer.observe(heading);
     for(let cert of document.querySelectorAll('.skills a')) 
         observer.observe(cert);
-    for(let a of document.querySelectorAll('a:not(.skills a):not(.intro a)'))
+    for(let a of document.querySelectorAll('social_media a'))
         observer.observe(a);
     for(let img of document.querySelectorAll('.images'))
         observer.observe(img);
