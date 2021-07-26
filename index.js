@@ -23,7 +23,6 @@ var observer=new IntersectionObserver(entries=> {
         } 
         if(entry.target.parentNode && entry.target.parentNode.classList.contains('details')) {
             if(entry.isIntersecting===true && !entry.target.classList.contains('show_p')) {
-                console.log(entry.target.textContent);
                 entry.target.classList.add('show_p');
             } 
             else if(entry.intersectionRatio == 0)
