@@ -51,6 +51,8 @@ h2 {
     animation: p_frame 1s ease-in-out 0s forwards;
 } 
 @keyframes p_frame {
+    0% {transform: translate3d(100%, 0, 0);
+	    opacity: 0;} 
     100% {transform: translate3d(0, 0, 0);
           opacity: 1;}
 } 
