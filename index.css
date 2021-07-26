@@ -121,7 +121,6 @@ a:hover::before ,a:focus::before {
 	width: 100%;
 	margin: 0;
 	overflow: visible;
-	background: #000;
 }
 .heading { 
 	width: 100%;
