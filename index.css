@@ -41,7 +41,7 @@ p {
 	padding: 20px 10px;
 	margin: 10px 0;
 	background: #000 !important;
-	transform: translate3d(100%, 0%, 0%);
+	transform: translate3d(100%, 0, 0);
 	opacity: 0.4;
 } 
 h2 {
@@ -52,7 +52,7 @@ h2 {
     animation: p_frame 1s ease-in-out 0s forwards;
 } 
 @keyframes p_frame {
-    100% {transform: translate3d(0%, 0%, 0%);
+    100% {transform: translate3d(0, 0, 0);
           opacity: 1;}
 } 
 a { 
