@@ -273,7 +273,7 @@ a:hover::before, a:focus::before {
 	margin: 0 20px 20px 0;
 	color: #E077FF;
 }
-.projects i {
+.projects em {
 	color: #ddd;
 } 
 .images { 
