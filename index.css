@@ -471,7 +471,7 @@ a:hover::before, a:focus::before {
 }
 .social_media a { 
 	height: fit-content;
-	width: 50px;
+	width: 50px !important;
 	margin: 5px;
 }
 .social_media a img { 
