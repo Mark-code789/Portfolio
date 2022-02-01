@@ -54,7 +54,7 @@ h2 {
     100% {transform: translate3d(0, 0, 0);
           opacity: 1;}
 } 
-a { 
+a:not(#client) { 
 	display: inline-block;
 	margin: 10% 0 0 0;
 	padding: 10px;
@@ -269,12 +269,15 @@ a:hover::before, a:focus::before {
 	background: transparent;
 	padding: 5px 0px;
 }
-.projects a { 
+.projects a:not(#client) { 
 	margin: 0 20px 20px 0;
 	color: #E077FF;
-}
+} 
 .projects em {
 	color: #ddd;
+} 
+.projects #client {
+	color: #E077FF;
 } 
 .images { 
 	margin: 0;
