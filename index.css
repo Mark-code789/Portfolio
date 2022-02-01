@@ -273,6 +273,9 @@ a:hover::before, a:focus::before {
 	margin: 0 20px 20px 0;
 	color: #E077FF;
 }
+.projects i {
+	color: #ddd;
+} 
 .images { 
 	margin: 0;
 	height: calc(60vw - 30px);
