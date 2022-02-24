@@ -102,8 +102,7 @@ a:hover::before, a:focus::before {
 	background: #D100FF;
 }
 .dark_button:hover { 
-	color: #190034;
-	
+	color: #190034 !important;
 }
 .cont { 
 	display: flex;
