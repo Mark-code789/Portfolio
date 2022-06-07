@@ -442,7 +442,7 @@ a:hover::before, a:focus::before {
     100% {transform: translateX(0) scale3d(1,1,1);}
 } 
 .contact a { 
-	padding: 20px;
+	padding: 10px 20px;
 	margin: 10px;
 }
 
