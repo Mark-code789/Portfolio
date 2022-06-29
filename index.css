@@ -256,8 +256,16 @@ a:hover::before, a:focus::before {
 }
 .projects h1 { 
 	background: transparent;
-}
-.projects .cont:last-of-type { 
+} 
+.projects .cont {
+	padding: 20px 0;
+} 
+
+.projects > .cont:first-of-type {
+	padding-bottom: 20px;
+} 
+
+.projects > .cont:last-of-type { 
 	padding-bottom: 70.7107px;
 }
 .projects h2 { 
